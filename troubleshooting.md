@@ -37,4 +37,23 @@ After configuring Windows event log monitoring and restarting the forwarder serv
       - Listening ports
       - and actual event collection/input configuration
   - Learned to use Splunk internal logs as a diagnostic source for troubleshooting ingestion issues
+---
+### Network Stablization and Static IP Configuration
+**Changes Made**
+- Configured a permanent static IP address on the Ubuntu Server: 192.168.68.61
+- Standardized internal IP scheme across the lab:
+- Ubuntu (Splunk Server): 192.168.68.61
+- Windows Victim: 192.168.68.62
+- Kali Attack Machine: 192.168.68.63
+- Fixed Netplan configuration issues and resolved YAML indentation errors
+- Verified correct routing and internet connectivity across all systems
+  
+**Outcome**
+- All virtual machines can now communicate reliably over the internal network
+- Stable addressing enables consistent Splunk forwarding and log ingestion
+- Improved reproducibility of the lab environment for future testing and documentation
 
+**Lessons Learned**
+- When utlizing multiple hardware solutions with multiple VMs Bridged connections are best
+- YAML Formatting is strict; indentation breaks configuration
+- Static IP consistency is essential for log forwarding and SIEM function
