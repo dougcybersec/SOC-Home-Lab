@@ -1,9 +1,11 @@
 ### Splunk showed "No users are created" after launching
 The initial Splunk installation entered a broken bootstrap/authentication state after incomplete initialization. 
-#### Resolution
-Performed a clean install of Splunk Enterprise on Ubuntu Server and recreated the admin account during first-run setup. 
-#### Lessons Learned
-Learned the importance of clean service initialization and proper shutdown procedures for Splunk services. 
+
+**Resolution**
+  - Performed a clean install of Splunk Enterprise on Ubuntu Server and recreated the admin account during first-run setup.
+
+**Lessons Learned**
+  - Learned the importance of clean service initialization and proper shutdown procedures for Splunk services. 
 ---
 ### VirtualBox Networking
 The initial VirutalBox configuration used standard NAT mode, which isolated the VMs from one another and resulted in overlapping IP addressing that prevented direct VM-to-VM communication. 
