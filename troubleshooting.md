@@ -70,3 +70,19 @@ After configuring Windows event log monitoring and restarting the forwarder serv
 
 **Lessons Learned**
 - Add files for ingestion through the input.conf
+
+---
+### Added Sysmon and Sysmon addon 
+**Changes Made**
+- Downloaded Sysmon64, Sysmon-config by SwiftOnSecurity, and the Sysmon addon from Splunk
+- Added WinEventLog://Microsoft-Windows-Sysmon/Operational to inputs.conf on the forwarder
+- Extracted Sysmon 64 and Sysmon-config onto the Forwader, Windows 11 (victim) 
+- Sent the addon to the Ubuntu server via scp
+- Extracted the addon, transferred ownership to splunk user on the Ubuntu server
+
+**Outcome**
+- XML logs now parse in Splunk
+
+**Lessons Learned**
+- Splunk doesn't hide information, all logs are parsed in xml, making them difficult to read from the index, but easier to search for useful information
+
