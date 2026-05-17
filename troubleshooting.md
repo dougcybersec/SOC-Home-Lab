@@ -57,3 +57,16 @@ After configuring Windows event log monitoring and restarting the forwarder serv
 - When utlizing multiple hardware solutions with multiple VMs Bridged connections are best
 - YAML Formatting is strict; indentation breaks configuration
 - Static IP consistency is essential for log forwarding and SIEM function
+
+---
+
+### Logs showing raw hex
+**Changes Made**
+Logs being ingested by Splunk were showing raw hex due to the fact that they were added to the forwarder incorrectly. 
+Fixed the issue by adding the Log files to input.conf and removing them from the monitor
+
+**Outcome**
+All log files now show actionable information instead of hex.
+
+**Lessons Learned**
+Add files for ingestion through the input.conf
